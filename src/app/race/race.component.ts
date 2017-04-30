@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RacesComponent } from '../races/races.component';
 
 @Component({
   selector: 'race',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RaceComponent implements OnInit {
 
-  constructor() { }
+	@Input() race;
+
+  constructor(
+  	private racesComponent: RacesComponent
+  	) { }
 
   ngOnInit() {
+  }
+
+  castDate(date) {
+    return new Date(date);
+  }
+
+  enterRace() {
+  	this.racesComponent.enterRace(this.race);
+  }
+
+  cancelRace() {
+  	this.racesComponent.cancelRace(this.race);
   }
 
 }
