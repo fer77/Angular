@@ -1,4 +1,4 @@
-# WatchUsBuildAngular2Final
+# Angular2 Racing App
 
 Generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
