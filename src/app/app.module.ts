@@ -8,19 +8,22 @@ import { AppComponent } from './app.component';
 import { RacesComponent } from './races/races.component';
 import { RaceService } from './races/race.service';
 import { RaceComponent } from './race/race.component';
+import { RaceDetailComponent } from './race-detail/race-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RacesComponent,
-    RaceComponent
+    RaceComponent,
+    RaceDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: '', component: RacesComponent }
+      { path: '', component: RacesComponent },
+      { path: 'races/:id', component: RaceDetailComponent }
       ])
   ],
   providers: [ RaceService ],
