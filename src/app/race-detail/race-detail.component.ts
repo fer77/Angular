@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-race-detail',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RaceDetailComponent implements OnInit {
 
-  constructor() { }
+	private raceId;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+  	this.route.params.forEach((params: Params) => this.raceId = params['id']);
   }
 
 }
