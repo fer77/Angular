@@ -22,7 +22,8 @@ import { RaceDetailComponent } from './race-detail/race-detail.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: '', component: RacesComponent },
+      { path: '', redirectTo: 'races', pathMatch: 'full' },
+      { path: 'races', component: RacesComponent },
       { path: 'races/:id', component: RaceDetailComponent }
       ])
   ],
