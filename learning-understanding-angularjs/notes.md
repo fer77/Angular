@@ -28,3 +28,7 @@ _HTML5_ introduced the `data-` to add whatever attribute we wanted on the page.
 
 **custom attributes**
 _angular_ uses `ng-` to add custom attrubutes to a page. _angular_ does allow the use of `data-ng-`.
+
+## 7
+
+**global name space** a structural goal of _Angular_ is to not pollute the global namespace.
