@@ -104,3 +104,50 @@ myApp.controller('mainController', function($scope) {
 
 ## 14
 
+```javascript
+myApp.controller('mainController', function($log) {
+    $log.log('log info');
+    $log.info('info info');
+    $log.warn('warn info');
+    $log.debug('debug info');
+    $log.error('error info');
+});
+// Things the $log service provides to our app.
+```
+
+```javascript
+myApp.controller('mainController', function($scope, $log, $filter) {
+    $scope.name = 'Bob';
+    $scope.formattedname = $filter('uppercase')($scope.name);
+    
+    $log.info($scope.name);
+    $log.info($scope.formattedname);
+});
+// Dependency injection gives us axcess to a whole ecosystem of features and utilities.
+```
+
+Angular's structure enforces good code.
+
+[Other modules could be uploded to our app].(https://code.angularjs.org/1.3.0-rc.1/)
+
+Add dependencies in a script tag.
+
+```html
+<!--    Messages module-->
+<!--   adds form validation-->
+    <script src="https://code.angularjs.org/1.3.0-rc.1/angular-messages.min.js"></script>
+```
+
+And add them to our app array:
+
+```javascript
+var myApp = angular.module('myApp', ['ngMessages']);
+```
+
+Make use of the module:
+
+```html
+//...
+    <div ng-messages="myForm.myField.$error">
+//...
+```
