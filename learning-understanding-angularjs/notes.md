@@ -77,3 +77,9 @@ function logPerson(person) {
 var bob = new Person('Bob', 'belcher');
 logPerson(bob);
 ```
+
+Angular uses dependency injection to force strong/stable app architecture.
+
+## 10
+
+**Scope** object from the scope service. This becomes the piece between the view and the controller.
