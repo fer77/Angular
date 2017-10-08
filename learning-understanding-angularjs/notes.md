@@ -83,3 +83,24 @@ Angular uses dependency injection to force strong/stable app architecture.
 ## 10
 
 **Scope** object from the scope service. This becomes the piece between the view and the controller.
+
+## 11
+
+```javascript
+// Angular injected $scope into the function.
+myApp.controller('mainController', function($scope) {
+    console.log($scope);
+});
+// Scope defines the data that goes back and forth between the view and the controller.
+```
+
+## 12
+
+
+
+## 13
+
+`$scope` us a service that is part of the core angular modules. Other services can be passed (injected) and they will become part of the list of depencencies anngular will include in our app.
+
+## 14
+
