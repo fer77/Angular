@@ -58,3 +58,22 @@ myApp.controller('mainController', function() {
         
 </div>
 ```
+
+## 9
+
+**dependency injection** giving a function an object.  Rather than creating an object inside a function, you pass it to the function.
+
+```javascript
+var person = function(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+}
+
+// This function is not dependent on how bob(Person) is created.
+function logPerson(person) {
+    console.log(person);
+}
+
+var bob = new Person('Bob', 'belcher');
+logPerson(bob);
+```
