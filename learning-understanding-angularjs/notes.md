@@ -181,3 +181,17 @@ myApp.controller('mainController', ['$scope', '$log'function($scope, $log) {
 ```
 
 minified file must be in the same order as nonminified file. when writing controllers write them as the minified version, to avoid errors when code is minified.
+
+## 17
+
+**interpolation** creating a string by combining strings and placeholders.
+
+```javascript
+'my name is ' + name;
+```
+
+_interpolation_ in angularjs:
+
+```html
+<h1>Hello {{ name }}!</h1>
+```
