@@ -151,3 +151,33 @@ Make use of the module:
     <div ng-messages="myForm.myField.$error">
 //...
 ```
+
+## 15
+
+## 16
+
+**minification** shrinking the size of files for faster download.
+
+```javascript
+var myApp = angular.module('myApp', []);
+
+myApp.controller('mainController', function($scope, $log) {
+    
+    $log.info($scope);
+    
+});
+```
+
+minified:
+
+```javascript
+var myApp = angular.module('myApp', []);
+
+myApp.controller('mainController', ['$scope', '$log'function($scope, $log) {
+    
+    $log.info($scope);
+    
+}]);
+```
+
+minified file must be in the same order as nonminified file. when writing controllers write them as the minified version, to avoid errors when code is minified.
