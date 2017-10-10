@@ -1,9 +1,7 @@
-var myApp = angular.module('myApp', ['ngMessages']);
+var myApp = angular.module('myApp', []);
 
-myApp.controller('mainController', function($scope, $log, $filter) {
-    $scope.name = 'Bob';
-    $scope.formattedname = $filter('uppercase')($scope.name);
+myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
     
-    $log.info($scope.name);
-    $log.info($scope.formattedname);
-});
+    $log.info($scope);
+    
+}]);
