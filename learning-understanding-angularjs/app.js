@@ -10,4 +10,11 @@ myApp.controller('mainController', ['$scope', '$filter', function($scope, $filte
     };
     
     
+    $scope.$watch('handle', function(newValue, oldValue) {
+        
+        console.log('***********digest cycle***********');
+        console.log('Old value: ' + oldValue);
+        console.log('New value: ' + newValue);
+    });
+    
 }]);
