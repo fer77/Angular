@@ -195,3 +195,36 @@ _interpolation_ in angularjs:
 ```html
 <h1>Hello {{ name }}!</h1>
 ```
+
+## 18
+
+**Directive**: an instruction to angular to manipulate a part of the DOM, i.e. _add a class_, _hide_/_show_, _create_. A good example is **ng-app** and **ng-controller** (custom attributes) needed to initialize the app.
+
+**ng-model** lets angular know that we want an element to be bound to a specific variable in the scope.
+
+**two way data-binding**:
+
+```html
+<input type="text" ng-model="handle" />
+
+<h1>twitter.com/{{ handle }}</h1>
+```
+
+**MODEL**
+
+```javascript
+$scope.handle
+    
+$scope.toLowerCase = function() { //... }
+    
+```
+**??**
+
+MV* what binds the model and the view?
+
+**VIEW**
+
+```html
+<input type="text" ng-model="handle" />
+<h1>twitter.com/{{ toLowerCase() }}</h1>
+```
