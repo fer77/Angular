@@ -221,6 +221,7 @@ $scope.toLowerCase = function() { //... }
 **??**
 
 MV* what binds the model and the view?
+_Watchers_ and the _digest loop_
 
 **VIEW**
 
@@ -231,7 +232,7 @@ MV* what binds the model and the view?
 
 ## 19
 
-**Event loop**
+**Event loop** is native to the browser.
 
 Elements in the html throw events, the _event loop_ waits for these events to be thrown. We just have to listen for those events:
 
@@ -244,3 +245,69 @@ tb.addEventListener('keypress', function(event) {
 ```
 
 Angular takes care of keeping track of those events.
+
+## 20
+
+Events the _event loop_ will be looking for may include:
+
+- keypress
+- click
+- mouseover
+- change
+- ...
+
+Angular adds the **angular context** to the event loop, virtually extending the event loop.
+
+**digest loop** checks if something has changed and keeps checking until all of the old values and the new values match.
+_digest cycle_ one revolution of the digest loop.
+    **watch list** a list of things angular will watch and check:
+        **watchers** keeps track of the original value and the new value, everytime something happens that may have changed the value.
+        
+This is the * in the MV* automatically keeping track of the variables and values in the views and the models.
+
+variable and functions that will get added to the watch list:
+
+```javascript
+$scope.handle = '';
+    
+    $scope.toLowerCase = function() {
+        
+        return $filter('lowercase')($scope.handle);
+    };
+```
+
+Watching the _watch list_:
+
+```javascript
+//...
+    $scope.$watch('handle', function(newValue, oldValue) {
+    
+        console.log('***********digest cycle***********');
+        console.log('Old value: ' + oldValue);
+        console.log('New value: ' + newValue);
+        
+    });
+//...
+```
+
+Setting things outside of the context of angular can cause unexpected errors:
+
+```javascript
+setTimeout(function() {
+    $scope.handle = 'new handle';
+    console.log('scope changed');
+}, 3000);
+```
+
+The above will notice the change, but angular digest cycle will not, because angular doesn't know to check for it. To avoid this kind of error we can put that piece of code inside the angular context:
+
+```javascript
+//...
+    $scope.$apply(function() {
+        $scope.handle = 'new handle';
+        console.log('scope changed');
+    });
+//...
+```
+
+This will tell angular to check for changes on that piece of code outside the angular context.
