@@ -228,3 +228,19 @@ MV* what binds the model and the view?
 <input type="text" ng-model="handle" />
 <h1>twitter.com/{{ toLowerCase() }}</h1>
 ```
+
+## 19
+
+**Event loop**
+
+Elements in the html throw events, the _event loop_ waits for these events to be thrown. We just have to listen for those events:
+
+```javascript
+var tb = document.getElementById('name');
+
+tb.addEventListener('keypress', function(event) {
+    console.log('Pressed!');
+});
+```
+
+Angular takes care of keeping track of those events.
