@@ -334,3 +334,11 @@ Other common directives:
 
 `ng-cloak` hides an element until angular has downloaded on the browser window.
 
+## 23
+
+**XMLHTTP** Request Object
+---
+
+Used by most frameworks, because it is difficult to use most frameworks wrap _XMLHTTP_ with things like AJAX(jQuery).
+
+Angular uses `$HTTP` as a wrapper to take away some of the complexity.
