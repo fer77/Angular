@@ -316,12 +316,21 @@ This will tell angular to check for changes on that piece of code outside the an
 
 Other common directives:
 
-`ng-if` allows for DOM elements to exist or be removed, depending on its true or false value.
+- `ng-if` allows for DOM elements to exist or be removed, depending on its true or false value.
 
-`ng-show` is not removed from the DOM, but gets a new attribute `ng-hide` that hides the element.
+- `ng-show` is not removed from the DOM, but gets a new attribute `ng-hide` that hides the element.
 
-`ng-hide` 'hides' the element until a true value is returned.
+- `ng-hide` 'hides' the element until a true value is returned.
 
-`ng-class="{ 'first': true, 'second': true, 'third': false }"`
+- `ng-class="{ 'first': true, 'second': true, 'third': false }"`
 
-`ng-repeat`
+- `ng-repeat`
+
+## 22
+
+Other common directives:
+
+`ng-click`
+
+`ng-cloak` hides an element until angular has downloaded on the browser window.
+
