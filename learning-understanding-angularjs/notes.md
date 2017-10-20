@@ -311,3 +311,17 @@ The above will notice the change, but angular digest cycle will not, because ang
 ```
 
 This will tell angular to check for changes on that piece of code outside the angular context.
+
+## 21
+
+Other common directives:
+
+`ng-if` allows for DOM elements to exist or be removed, depending on its true or false value.
+
+`ng-show` is not removed from the DOM, but gets a new attribute `ng-hide` that hides the element.
+
+`ng-hide` 'hides' the element until a true value is returned.
+
+`ng-class="{ 'first': true, 'second': true, 'third': false }"`
+
+`ng-repeat`
