@@ -18,4 +18,11 @@ myApp.controller('mainController', ['$scope', '$filter', function($scope, $filte
     ];
     
 //    console.log($scope.rules);
+    
+    $scope.alertClick = function() {
+        
+        alert('Clicked!!');
+    }
+    
+    $scope.name = 'Bob Belcher';
 }]);

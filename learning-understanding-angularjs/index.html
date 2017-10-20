@@ -13,12 +13,24 @@
     <div class="container">
         <div class="col-sm-12" ng-controller="mainController">
             <div>
-                <label>
-                    what is your twitter handle?
-                </label>
-                <input type="text" ng-model="handle" />
+                <div class="row">
+                    <div class="col-sm-6">
+                       
+                       <div ng-cloak>{{ name }}</div>
+                        <button class="btn btn-default" ng-click="alertClick()">Click Me!</button>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                       
+                        <label>what is your twitter handle?</label>
+                        <input type="text" ng-model="handle" />
+                        
+                    </div>
+                </div>
             </div>
-            
+
             <div class="alert" ng-class="{ 'alert-warning': handle.length < characters, 'alert-danger': handle.length > characters }" ng-if="handle.length !== characters">
                 ng-if
                 <div ng-show="handle.length > characters">More than 5 characters</div>
@@ -30,12 +42,12 @@
             <div class="alert" ng-hide="handle.length !== characters">
                 ng-hide
             </div>
-            
+
             <hr />
             <!-- <h1>twitter.com/{{ handle }}</h1> -->
             <h1>twitter.com/{{ toLowerCase() }}</h1>
             <!-- INTERPOLATES THE RETURNED VALUE -->
-            
+
             <h3>Rules</h3>
             <ul>
                 <li ng-repeat="rule in rules">{{ rule.rulename }}</li>
