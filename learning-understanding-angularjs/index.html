@@ -15,18 +15,18 @@
             <div>
                 <div class="row">
                     <div class="col-sm-6">
-                       
+
                        <div ng-cloak>{{ name }}</div>
                         <button class="btn btn-default" ng-click="alertClick()">Click Me!</button>
-                        
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                       
+
                         <label>what is your twitter handle?</label>
                         <input type="text" ng-model="handle" />
-                        
+
                     </div>
                 </div>
             </div>
@@ -48,9 +48,9 @@
             <h1>twitter.com/{{ toLowerCase() }}</h1>
             <!-- INTERPOLATES THE RETURNED VALUE -->
 
-            <h3>Rules</h3>
+            <h3>People</h3>
             <ul>
-                <li ng-repeat="rule in rules">{{ rule.rulename }}</li>
+                <li ng-repeat="person in people">{{ person.name }}</li>
             </ul>
         </div>
     </div>
