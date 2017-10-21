@@ -35,7 +35,7 @@ _angular_ uses `ng-` to add custom attrubutes to a page. _angular_ does allow th
 
 **global name space** a structural goal of _Angular_ is to not pollute the global namespace.
 
-## 8 
+## 8
 
 `ng-app="myApp"` custom attribute (module name) that connects everything inside the html tag with this attribute's module name.
 
@@ -55,7 +55,7 @@ myApp.controller('mainController', function() {
 
 ```html
 <div ng-controller="mainController">
-        
+
 </div>
 ```
 
@@ -119,7 +119,7 @@ myApp.controller('mainController', function($log) {
 myApp.controller('mainController', function($scope, $log, $filter) {
     $scope.name = 'Bob';
     $scope.formattedname = $filter('uppercase')($scope.name);
-    
+
     $log.info($scope.name);
     $log.info($scope.formattedname);
 });
@@ -162,9 +162,9 @@ Make use of the module:
 var myApp = angular.module('myApp', []);
 
 myApp.controller('mainController', function($scope, $log) {
-    
+
     $log.info($scope);
-    
+
 });
 ```
 
@@ -174,9 +174,9 @@ minified:
 var myApp = angular.module('myApp', []);
 
 myApp.controller('mainController', ['$scope', '$log'function($scope, $log) {
-    
+
     $log.info($scope);
-    
+
 }]);
 ```
 
@@ -214,9 +214,9 @@ _interpolation_ in angularjs:
 
 ```javascript
 $scope.handle
-    
+
 $scope.toLowerCase = function() { //... }
-    
+
 ```
 **??**
 
@@ -262,16 +262,16 @@ Angular adds the **angular context** to the event loop, virtually extending the 
 _digest cycle_ one revolution of the digest loop.
     **watch list** a list of things angular will watch and check:
         **watchers** keeps track of the original value and the new value, everytime something happens that may have changed the value.
-        
+
 This is the * in the MV* automatically keeping track of the variables and values in the views and the models.
 
 variable and functions that will get added to the watch list:
 
 ```javascript
 $scope.handle = '';
-    
+
     $scope.toLowerCase = function() {
-        
+
         return $filter('lowercase')($scope.handle);
     };
 ```
@@ -281,11 +281,11 @@ Watching the _watch list_:
 ```javascript
 //...
     $scope.$watch('handle', function(newValue, oldValue) {
-    
+
         console.log('***********digest cycle***********');
         console.log('Old value: ' + oldValue);
         console.log('New value: ' + newValue);
-        
+
     });
 //...
 ```
@@ -342,3 +342,5 @@ Other common directives:
 Used by most frameworks, because it is difficult to use most frameworks wrap _XMLHTTP_ with things like AJAX(jQuery).
 
 Angular uses `$HTTP` as a wrapper to take away some of the complexity.
+
+## 24
