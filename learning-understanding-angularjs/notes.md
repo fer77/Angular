@@ -344,3 +344,7 @@ Used by most frameworks, because it is difficult to use most frameworks wrap _XM
 Angular uses `$HTTP` as a wrapper to take away some of the complexity.
 
 ## 24
+
+Angular's dependency injection makes it possible to have multiple views and controllers in our `index.html`.  The `$scope` object is unique to its controller.
+
+Each view is connected individually by `ng-controller` to that views controller and `$scope`.
