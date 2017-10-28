@@ -348,3 +348,12 @@ Angular uses `$HTTP` as a wrapper to take away some of the complexity.
 Angular's dependency injection makes it possible to have multiple views and controllers in our `index.html`.  The `$scope` object is unique to its controller.
 
 Each view is connected individually by `ng-controller` to that views controller and `$scope`.
+
+## 25
+
+SPA (single page apps).
+---
+
+**URL** is a string that specifies a location.
+
+Using the URL identifier is the key to single page applications.
