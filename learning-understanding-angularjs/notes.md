@@ -363,3 +363,32 @@ Using the URL identifier is the key to single page applications.
 ## 27
 
 `$routeProvider` lets us specify routes.
+
+Download is a lot faster because the browser only downloads the code needed for the current page and not the whole document plus the code needed for the page being visited.
+
+## 28
+
+_pattern matching_
+
+```javascript
+//...
+.when('/second/:num', {
+    templateUrl: 'pages/second.html',
+    controller: 'secondController'
+  })
+  //...
+```
+
+now in the controller we can use `$routeParams`:
+
+```javascript
+myApp.controller('secondController', ['$scope', '$location', '$log', '$routeParams', function($scope, $location, $log, $routeParams) {
+//...
+ $scope.num = $routeParams.num;
+ //...
+}]);
+```
+
+This way we can pass values via the # in the _URL_ to our `$routeParams` and be available in the controller.
+
+## 29
