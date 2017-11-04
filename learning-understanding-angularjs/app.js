@@ -11,6 +11,10 @@ myApp.config(function($routeProvider) {
     templateUrl: 'pages/second.html',
     controller: 'secondController'
   })
+  .when('/second/:num', {
+    templateUrl: 'pages/second.html',
+    controller: 'secondController'
+  })
 });
 
 myApp.controller('mainController', ['$scope', '$location', '$log', function($scope, $location, $log) {
@@ -18,6 +22,7 @@ myApp.controller('mainController', ['$scope', '$location', '$log', function($sco
  $scope.message = 'You are on the main page';
 }]);
 
-myApp.controller('secondController', ['$scope', '$location', '$log', function($scope, $location, $log) {
+myApp.controller('secondController', ['$scope', '$location', '$log', '$routeParams', function($scope, $location, $log, $routeParams) {
  $scope.message = 'You are on the second page';
+ $scope.num = $routeParams.num || '';
 }]);
