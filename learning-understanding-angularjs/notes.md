@@ -392,3 +392,34 @@ myApp.controller('secondController', ['$scope', '$location', '$log', '$routePara
 This way we can pass values via the # in the _URL_ to our `$routeParams` and be available in the controller.
 
 ## 29
+
+**Singleton** the one and only copy of an object.  A pattern in OOP.
+
+**instantiating** creaeting copies or versions of an object.
+
+Angular's _services_ are implemented as _singletons_, except for `$scope`.  `$scope` in angular is a _child scope_.  When passed to a controller a new `$scope` is created from the _root scope_.  Everything else is a _singleton_ including services created for the app.
+
+```javascript
+myApp.controller('mainController', ['$scope', function($scope, $log) {
+  //... $log.main = 'Property from main';
+ $log.log($log);
+ $log.main = 'Property from main';
+}]);
+
+// The $scope service being injected to both controllers is the same for both and not a copy of the $scope object.
+
+myApp.controller('secondController', ['$scope', function($scope, $log) {
+ //...
+ $log.log($log);
+ $log.second = 'Property from second';
+}]);
+```
+
+openeing the above on the developer tools will reveal that the `$log` object contains two properties with the values from their respective controllers, contained in the same opbject:
+
+```javascript
+//...
+main: "property from main"
+second: "property from second"
+//...
+```
