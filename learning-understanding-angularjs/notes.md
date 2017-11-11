@@ -460,3 +460,22 @@ _storing_ a _service's_ values.
 ## 31
 
 **custom directives** or _reusable components_ such as `<searchResults></searchResults>` or `<div searchResults></div>` that have functionality built into them.
+
+## 32
+
+_variable names and normalization_.
+
+**normalize** making something consitent to a standard.
+
+Angular uses HTML standards for naming componenst and _normalizes_ the component's names to match JS standards:
+
+```html
+<search-results></search-results>
+```
+
+```javascript
+var searchResults = //...
+```
+
+## 33
+
