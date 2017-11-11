@@ -499,3 +499,17 @@ myApp.directive('searchResults', function() {
 `M` html comment `<!-- directive: search-resutlts -->`,
 
 Useful for avoiding repetition of elements and making html files clean and easy to follow.
+
+## 34
+
+**templates** change `template` to `templateUrl` define the path to the directive and done.
+
+```javascript
+myApp.directive('searchResults', function() {
+  return {
+    //...
+    templateUrl: 'directives/search-results.html',
+    //...
+  }
+});
+```
