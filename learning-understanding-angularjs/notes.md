@@ -456,3 +456,7 @@ _storing_ a _service's_ values.
 `$scope` is not watched by the _digest loop_ its values, if changed, can be stored manually within a `$watch`.
 
 **services**, **providers**, and **factories** are very similar
+
+## 31
+
+**custom directives** or _reusable components_ such as `<searchResults></searchResults>` or `<div searchResults></div>` that have functionality built into them.
