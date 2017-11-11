@@ -27,27 +27,19 @@ myApp.service('nameService', function() {
   };
 });
 
-myApp.controller('mainController', ['$scope', '$log', 'nameService', function($scope, $log, nameService) {
-  // $log.info($location.path());
- $scope.message = 'You are on the main page';
- $scope.name = nameService.name;
+myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
 
- $scope.$watch('name', function() {
-  nameService.name = $scope.name;
-  });
-
- $log.log(nameService.name);
- $log.log(nameService.nameLength());
 }]);
 
-myApp.controller('secondController', ['$scope', '$location', '$log', '$routeParams', 'nameService', function($scope, $location, $log, $routeParams, nameService) {
- $scope.message = 'You are on the second page';
- $scope.num = $routeParams.num || '';
+myApp.controller('secondController', ['$scope', '$log', '$routeParams', function($scope, $log, $routeParams) {
 
- $scope.name = nameService.name;
-
- $scope.$watch('name', function() {
-  nameService.name = $scope.name;
-  });
- 
 }]);
+
+myApp.directive('searchResults', function() {
+  return {
+    //This will be our directive.
+    restrict: 'AECM',
+    template: '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start"><div class="d-flex w-100 justify-content-between"><h5 class="mb-1">List group item heading</h5><small class="text-muted">3 days ago</small></div><p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p><small class="text-muted">Donec id elit non mi porta.</small></a>',
+    replace: true
+  }
+});
