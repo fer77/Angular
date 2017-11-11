@@ -423,3 +423,36 @@ main: "property from main"
 second: "property from second"
 //...
 ```
+
+## 30
+
+Creating a _service_
+
+```javascript
+// SERVICE
+myApp.service('nameService', function() {
+  var self = this;
+  
+  this.name = 'Linda Belcher';
+
+  this.nameLength = function() {
+    return self.name.length;
+  };
+});
+
+//CONTROLLER
+//Add services with dependency inhection:
+myApp.controller('mainController', ['$scope', '$log', 'nameService' function($scope, $log, nameService) {
+  //...
+ $scope.name = 'Tina Belcher';
+
+ $log.log(nameService.name)
+}]);
+```
+
+**services** can share content across pages and use services to encapsulate functionality.
+
+_storing_ a _service's_ values.
+`$scope` is not watched by the _digest loop_ its values, if changed, can be stored manually within a `$watch`.
+
+**services**, **providers**, and **factories** are very similar
