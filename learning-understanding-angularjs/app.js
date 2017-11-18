@@ -45,8 +45,7 @@ myApp.directive('searchResults', function() {
     templateUrl: 'directives/search-results.html',
     replace: true,
     scope: {
-      personName: "@",
-      personAddress: "@"
+      personObject: "="
     }
   }
 });
