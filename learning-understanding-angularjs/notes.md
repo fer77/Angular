@@ -513,3 +513,31 @@ myApp.directive('searchResults', function() {
   }
 });
 ```
+
+## 35
+
+**Directives** & **scope**
+
+**Isolated scope** 
+
+```javascript
+myApp.directive('searchResults', function() {
+  return {
+    //This will be our directive.
+    restrict: 'AECM',
+    templateUrl: 'directives/search-results.html', // Both directive and controller have access to this template.  The $scope can be compromised.
+    replace: true,
+    scope: {
+      // This will isolate the scope from our directive.  Specifies that 'templateUrl' is our view and 'scope' is our controller.
+      personName: "@"
+    }
+  }
+});
+```
+
+We can then access things in our scope like this:
+
+`@` text
+```html
+<search-results person-name="{{ person.name }}"></search-results>
+```
