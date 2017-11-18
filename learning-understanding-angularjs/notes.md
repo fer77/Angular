@@ -514,11 +514,12 @@ myApp.directive('searchResults', function() {
 });
 ```
 
-## 35 - 36
+## 35 - 37
 
 **Directives** & **scope**
 
 _interpolation_ one way text binding.
+_object map_ object passed to a function as an argument.
 
 **Isolated scope** 
 
@@ -542,6 +543,7 @@ We can then access things in our scope like this:
 
 `@` text
 `=` two way binding
+`&` to pass functions
 
 ```html
 <!-- passes part of an object -->
