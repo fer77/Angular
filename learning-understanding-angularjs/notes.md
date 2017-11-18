@@ -553,3 +553,15 @@ We can then access things in our scope like this:
 <!-- no need for interpolation, just pass the object by name -->
 <search-results person-object="person"></search-results>
 ```
+
+## 38
+
+_ng-repeat_ can be used together with directives:
+
+```html
+<search-results 
+      person-object="person"
+      formatted-address-function="formattedAddress(person)"
+       ng-repeat="person in people"></search-results>
+```
+
