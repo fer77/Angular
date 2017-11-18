@@ -28,13 +28,29 @@ myApp.service('nameService', function() {
 });
 
 myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
-  $scope.person = {
-    name: 'Bob Belcher',
-    address: '123 Burger ln',
-    city: 'ocean view',
-    state: 'MA',
-    zip: '12345'
-  }
+  $scope.people = [
+      {
+        name: 'Bob Belcher',
+        address: '123 Burger ln',
+        city: 'ocean view',
+        state: 'MA',
+        zip: '12345'
+      },
+      {
+        name: 'Linda Belcher',
+        address: '123 Burger ln',
+        city: 'ocean view',
+        state: 'MA',
+        zip: '12345'
+      },
+      {
+        name: 'Tina Belcher',
+        address: '123 Burger ln',
+        city: 'ocean view',
+        state: 'MA',
+        zip: '12345'
+      }
+    ]
   $scope.formattedAddress = function(person) {
     return person.address + ', ' + person.city + ', ' + person.state + ' ' + person.zip;
   }
