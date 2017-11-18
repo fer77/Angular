@@ -514,9 +514,11 @@ myApp.directive('searchResults', function() {
 });
 ```
 
-## 35
+## 35 - 36
 
 **Directives** & **scope**
+
+_interpolation_ one way text binding.
 
 **Isolated scope** 
 
@@ -529,7 +531,8 @@ myApp.directive('searchResults', function() {
     replace: true,
     scope: {
       // This will isolate the scope from our directive.  Specifies that 'templateUrl' is our view and 'scope' is our controller.
-      personName: "@"
+      personName: "@" // or
+      personObject: "="
     }
   }
 });
@@ -538,6 +541,13 @@ myApp.directive('searchResults', function() {
 We can then access things in our scope like this:
 
 `@` text
+`=` two way binding
+
 ```html
+<!-- passes part of an object -->
 <search-results person-name="{{ person.name }}"></search-results>
+
+<!-- passes the whole object -->
+<!-- no need for interpolation, just pass the object by name -->
+<search-results person-object="person"></search-results>
 ```
