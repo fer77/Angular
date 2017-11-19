@@ -565,3 +565,32 @@ _ng-repeat_ can be used together with directives:
        ng-repeat="person in people"></search-results>
 ```
 
+## 39
+
+**compile** and **link** when building code, the compiler converts code to a lower-level language, then the linker generates a file the computer will actually interact with.
+
+- pre: (link) documentation advises against using pre-link in our code.
+
+- post: (link) 
+
+```javascript
+//...
+compile: function(elem, attrs) {
+  console.log('Compiling...');
+  console.log(elem.html());// html that defines the view of our directive. consoled only 1x.
+
+  return {
+    pre: function(scope, elements, attrs) {
+      console.log('Pre-linking...');
+      console.log(elements);// consoled 3x for everytime ng-repeat(loop) runs
+    },
+    post: function(scope. elements, attrs) {
+      console.log('Post-linking...');
+      console.log(scope); // outputs the model
+      console.log(elements);// outputs the view. consoled 3x for everytime ng-repeat(loop) runs
+    }
+  }
+}
+```
+
+Angular 1. _compiles_, 2. _pre-links_ each directive and then 3. _post-links_.
