@@ -70,24 +70,10 @@ myApp.directive('searchResults', function() {
       personObject: "=",
       formattedAddressFunction: "&"
     },
-    compile: function(elem, attrs) {
-      console.log('Compiling...');
-      console.log(elem.html());
-
-      return {
-        pre: function(scope, elements, attrs) {
-          console.log('Pre-linking...');
-          console.log(elements);
-        },
-        post: function(scope, elements, attrs) {
-          console.log('Post-linking...');
+    link: function(scope, elements, attrs) {
+          console.log('Linking...');
           console.log(scope);
-          if (scope.personObject.name == 'Tina Belcher') {
-            a.style.background = 'pink';
-          }
           console.log(elements);
-        }
       }
     }
-  }
 });
