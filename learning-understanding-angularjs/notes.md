@@ -602,3 +602,9 @@ Angular:
 ## 40
 
 **link** same as an empty _compile_ returning a _post link_
+
+## 41
+
+**transclusion** include one document inside another. Placing a copy of a document at a particular point isde another.
+
+_ng-transclude_ the `<ng-transclude>`
