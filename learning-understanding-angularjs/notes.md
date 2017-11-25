@@ -567,7 +567,7 @@ _ng-repeat_ can be used together with directives:
 
 ## 39
 
-**compile** and **link** when building code, the compiler converts code to a lower-level language, then the linker generates a file the computer will actually interact with.
+**compile** and **link** when building code, the _compiler_ converts code to a lower-level language, then the _link_ generates a file the computer will actually interact with.
 
 - pre: (link) documentation advises against using pre-link in our code.
 
@@ -593,4 +593,12 @@ compile: function(elem, attrs) {
 }
 ```
 
-Angular 1. _compiles_, 2. _pre-links_ each directive and then 3. _post-links_.
+Angular:
+
+1. _compiles_, 
+2. _pre-links_ each directive, and then 
+3. _post-links_.
+
+## 40
+
+**link** same as an empty _compile_ returning a _post link_
