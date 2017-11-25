@@ -3,4 +3,7 @@
         <h5 class="mb-1">{{ personObject.name }}</h5>
     </div>
     <p class="mb-1">{{ formattedAddressFunction({ person: personObject }) }}</p>
+    <small><ng-transclude></ng-transclude></small>
+    <!-- or -->
+    <small ng-transclude></small>
 </a>

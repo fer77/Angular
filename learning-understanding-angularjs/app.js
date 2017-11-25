@@ -70,10 +70,6 @@ myApp.directive('searchResults', function() {
       personObject: "=",
       formattedAddressFunction: "&"
     },
-    link: function(scope, elements, attrs) {
-          console.log('Linking...');
-          console.log(scope);
-          console.log(elements);
-      }
-    }
+    transclude: true
+  }
 });
