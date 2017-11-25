@@ -10,11 +10,11 @@ weatherApp.config(function($routeProvider) {
   })
   .when('/forecast', {
     templateUrl: 'pages/forecast.html',
-    controller: 'foreCastController'
+    controller: 'forecastController'
   })
   .when('/forecast/:days', {
     templateUrl: 'pages/forecast.html',
-    controller: 'foreCastController'
+    controller: 'forecastController'
   })
 });
 
@@ -32,7 +32,7 @@ weatherApp.controller('homeController', ['$scope', 'cityService', function($scop
 	});
 }]);
 
-weatherApp.controller('foreCastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService) {
+weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService) {
 	$scope.apiKey = '6f5a071d58e4bfb4d5f7310070e1ff94'
 	$scope.city = cityService.city;
 	// gets the days from the route if it exists otherwise default is 2 days.
