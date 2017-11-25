@@ -14,11 +14,20 @@ weatherApp.config(function($routeProvider) {
   })
 });
 
+// SERVICES
+weatherApp.service('cityService', function() {
+	this.city = 'New York, NY';
+});
+
 // CONTROLLERS
-weatherApp.controller('homeController', ['$scope', function($scope) {
-	$scope.hello = 'Hello World!'
+weatherApp.controller('homeController', ['$scope', 'cityService', function($scope, cityService) {
+	$scope.city = cityService.city;
+
+	$scope.$watch('city', function() {
+		cityService.city = $scope.city;
+	});
 }]);
 
-weatherApp.controller('foreCastController', ['$scope', function($scope) {
-	$scope.hello = 'Hello World!'
+weatherApp.controller('foreCastController', ['$scope', 'cityService', function($scope, cityService) {
+	$scope.city = cityService.city;
 }]);
