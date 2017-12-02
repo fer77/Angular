@@ -36,7 +36,7 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
 	$scope.apiKey = '6f5a071d58e4bfb4d5f7310070e1ff94'
 	$scope.city = cityService.city;
 	// gets the days from the route if it exists otherwise default is 2 days.
-	$scope.days = $routeParams.days || 2;
+	$scope.days = $routeParams.days || '2';
 	$scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast?', {callback: 'JSON_CALLBACK'}, {get: {method: 'JSONP'}});
 	$scope.weatherResult = $scope.weatherAPI.get({q: $scope.city, cnt: $scope.days, appid: $scope.apiKey});
 
