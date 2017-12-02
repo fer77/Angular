@@ -611,4 +611,56 @@ _ng-transclude_ the `<ng-transclude>`
 
 ## 42 - 47
 
+Making a custom directive
 
+- Make the directive template (html):
+- Define directive and its name (js)
+
+```javascript
+weatherApp.directive('weatherReport', function() {
+//...
+});
+```
+- Return directive object
+
+```javascript
+//...
+return {
+    restrict: 'E',
+    templateUrl: 'directives/weather-report.html',
+    replace: true
+//...
+```
+- Isolate scope 
+
+```javascript
+//...
+scope: {
+      weatherDay: '=',
+      convertToStandard: '&',
+      convertToDate: '&',
+      dateFormat: '@'
+    }
+//...
+```
+- Pass custom attributes to directive:
+
+```html
+<weather-report
+  weather-day="w"
+  convert-to-standard="convertToFahrenheit(daytimeTemp)"
+  convert-to-date="convertToDate(dt)"
+  date-format="MMM d, y">
+</weather-report>
+```
+- Update directive to use the declared variable names
+
+```html
+<!-- //... -->
+  <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt_txt }) | date: dateFormat }}</h3>
+</div>
+<div class="panel-body">
+  Daytime Temperature: {{ convertToStandard({ daytimeTemp: weatherDay.main.temp_max }) }}
+</div>
+<!-- //... -->
+```
