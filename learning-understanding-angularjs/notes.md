@@ -609,7 +609,7 @@ Angular:
 
 _ng-transclude_ the `<ng-transclude>`
 
-## 42 - 47
+## 42 - 48
 
 Making a custom directive
 
@@ -664,3 +664,9 @@ scope: {
 </div>
 <!-- //... -->
 ```
+
+## 49 - 50
+
+**Services** pull as much logic and aplication a s possible out of controllers and into objects and _services_
+
+services can have services like `$resource` injected to them the same way as controllers.
