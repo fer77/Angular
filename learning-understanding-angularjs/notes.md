@@ -609,7 +609,6 @@ Angular:
 
 _ng-transclude_ the `<ng-transclude>`
 
-## 42
+## 42 - 47
 
-## 43
 
