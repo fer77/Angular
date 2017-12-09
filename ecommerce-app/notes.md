@@ -23,3 +23,9 @@ _back-end_ stores and processes data, sits on a web server or multiple web serve
     - business logic
 
 _HTTP services_ or _API_ available endpoints accessible via the _HTTP protocol_
+
+## 2
+
+**node** runtime environment to execute javascript code outside the browser.
+**NPM** (Node Package Manager) installs third party libraries:
+    - Angular CLI
