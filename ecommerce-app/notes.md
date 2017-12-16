@@ -29,3 +29,16 @@ _HTTP services_ or _API_ available endpoints accessible via the _HTTP protocol_
 **node** runtime environment to execute javascript code outside the browser.
 **NPM** (Node Package Manager) installs third party libraries:
     - Angular CLI
+
+## 3
+
+`e2e` _end to end_ where automated tests for the application are written.
+
+`src/main.ts` starting point of the application. Bootstraps the main module of the application:
+
+```javascript
+// main.ts
+//...
+platformBrowserDynamic().bootstrapModule(AppModule);
+```
+
