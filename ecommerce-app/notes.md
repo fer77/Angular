@@ -42,3 +42,12 @@ _HTTP services_ or _API_ available endpoints accessible via the _HTTP protocol_
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
+## 4
+
+angular cli uses _webpack_ to compile(bundel) application code and minifies it for optimization:
+
+`polyfills` scripts to fill the gap between the javascript that angular needs and the versions of javascript used by diffrent web-browsers.
+
+`vendor.bundle.js` all third party libraries.
+
+**Hot Module Replacement** (_HMR_) browser is reloaded everytime a change is saved and compiled.
