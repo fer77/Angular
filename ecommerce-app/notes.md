@@ -51,3 +51,12 @@ angular cli uses _webpack_ to compile(bundel) application code and minifies it f
 `vendor.bundle.js` all third party libraries.
 
 **Hot Module Replacement** (_HMR_) browser is reloaded everytime a change is saved and compiled.
+
+## 5
+
+**typescript** a superset of javascript, any valid js code is valid typescript code.
+
+- _strong typing_
+- object-oriented features
+- compile-time errors
+- intellicense
