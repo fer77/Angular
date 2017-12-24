@@ -64,3 +64,36 @@ angular cli uses _webpack_ to compile(bundel) application code and minifies it f
 ## 6
 
 _typescript_ compilations step happens 'under the hood' when working in an Angular app.
+
+
+## 7
+
+_variable declarations_
+
+There are two ways to declare variables in typescript:
+
+1. `var`
+
+```javascript
+function doSomething() {
+  for(var i = 0; i < 5; i++) {// 'i' is available inside the 'for' block...
+    console.log(i);
+  }
+  console.log('Finally: ' + i);// 'i' is also available outside the 'for' block.
+}
+
+doSomething();
+```
+
+2. `let`
+
+```javascript
+function doSomething() {
+  for(let i = 0; i < 5; i++) {
+    console.log(i);
+  }
+  console.log('Finally: ' + i);// throws an error when compiling
+}
+
+doSomething();
+```
