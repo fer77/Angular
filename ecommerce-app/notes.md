@@ -153,3 +153,14 @@ var Color;
 var backgroundColor = Color.Red;
 
 ```
+
+## 9
+
+**type assertions** a way of telling the ts what type a variable is. Does not change the type of the variable at run time. it is just a way of telling the ts compiler about the variable.
+
+```javascript
+let message;
+message = 'abc';
+let endsWithC = (<string>message).endsWith('c');
+let alsoEndsWithC = (message as string).endsWith('c');
+```
