@@ -60,3 +60,7 @@ angular cli uses _webpack_ to compile(bundel) application code and minifies it f
 - object-oriented features
 - compile-time errors
 - intellicense
+
+## 6
+
+_typescript_ compilations step happens 'under the hood' when working in an Angular app.
