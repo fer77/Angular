@@ -1,16 +1,6 @@
-// function log(message) {
-//   console.log(message);
-// }
-//
-// var message = 'Hello World';
-//
-// log(message);
+const ColorRed = 0;
+const ColorGreen = 1;
+const ColorBlue = 2;
 
-function doSomething() {
-  for(let i = 0; i < 5; i++) {
-    console.log(i);
-  }
-  console.log('Finally: ' + i);
-}
-
-doSomething();
+enum Color { Red = 0, Green = 2, Blue = 2 };
+let backgroundColor = Color.Red;

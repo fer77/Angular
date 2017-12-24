@@ -97,3 +97,59 @@ function doSomething() {
 
 doSomething();
 ```
+
+## 8
+
+```javascript
+let count = 5;
+
+count = 'a';// error: number.
+
+let a;// type: any
+// typescript throws no errors
+a = 1;
+a = true;
+a = 'a';
+```
+
+**type annotation**
+
+```javascript
+let a: number;
+a = 1;
+a = true;// error: number
+a = 'a';// error: number
+```
+
+typescript has diffrent types:
+
+- number `let a: number;`
+- booleans `let b: boolean`
+- strings `let c: string`
+- any `let d: any;`
+- arrays `let e: number[]`
+- enum:
+
+```javascript
+// TypeScript
+const ColorRed = 0;
+const ColorGreen = 1;
+const ColorBlue = 2;
+
+enum Color { Red = 0, Green = 2, Blue = 2 };
+let backgroundColor = Color.Red;
+
+// Same code in Javascript:
+var ColorRed = 0;
+var ColorGreen = 1;
+var ColorBlue = 2;
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 2] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+;
+var backgroundColor = Color.Red;
+
+```
