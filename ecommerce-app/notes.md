@@ -231,3 +231,30 @@ class Point {
   }
 }
 ```
+
+## 13
+
+When defining an object of custom type memory needs to be explicitly allocated to it (`new`):
+
+```javascript
+class Point {
+  x: number;
+  y: number;
+
+  draw() {
+    console.log('X: ' + this.x + ', Y: ' + this.y);
+  }
+
+  getDistance( point: Point) {
+    //...
+  }
+}
+
+let point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();
+```
+
+`class Point` this is a class.
+`let point = new Point()` this is an object. An Object is an instance of a class.
