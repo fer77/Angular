@@ -164,3 +164,49 @@ message = 'abc';
 let endsWithC = (<string>message).endsWith('c');
 let alsoEndsWithC = (message as string).endsWith('c');
 ```
+
+## 10
+
+_Arrow_ functions: similar to [lambda expression](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)
+
+```javascript
+let log = function(message) {
+  console.log(message);
+}
+// Arrow function
+// 
+letdoLog = (message) => console.log(message);
+```
+
+## 11
+
+**inline anotation**
+
+```javascript
+let drawPoint = (point: { x: number, y: number }) => {
+  //...
+}
+
+drawPoint({
+  x: 1,
+  y: 2
+  })
+```
+
+**interfaces** defines the shape of an object.
+
+```javascript
+interface Point {
+  x: number,
+  y: number
+}
+
+let drawPoint = (point: Point) => {
+  //...
+}
+
+drawPoint({
+  x: 1,
+  y: 2
+  })
+```
