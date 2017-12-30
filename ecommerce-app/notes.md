@@ -210,3 +210,24 @@ drawPoint({
   y: 2
   })
 ```
+
+## 12
+
+**cohesion** things that are related should be part of one 'unit' (class).
+
+**class** groups variables (properties) and functions (methods) that are highly related.
+
+```javascript
+class Point {
+  x: number;
+  y: number;
+
+  draw() {
+    //...
+  }
+
+  getDistance( point: Point) {
+    //...
+  }
+}
+```
