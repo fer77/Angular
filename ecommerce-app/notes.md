@@ -332,3 +332,7 @@ TypeScript has two access modifiers - _public_ and _private_.
   set c(x) { this.a = x / 2; }
 };
  ```
+
+## 18
+
+**module** in typescript we divide our code into files(modules) and export/import one or more types.
