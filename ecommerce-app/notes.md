@@ -174,7 +174,7 @@ let log = function(message) {
   console.log(message);
 }
 // Arrow function
-// 
+//
 letdoLog = (message) => console.log(message);
 ```
 
@@ -289,10 +289,26 @@ adding an `?` makes a parameter optional
 class Point {
   //...
   constructor(x?: number, y?: number) {
-    //...
+  //...
   }
 //...
 // constructor values for 'x' and 'y' are now optional
 let point = new Point();
 point.draw();
 ```
+
+## 15
+
+To prevent changing the value of an object's properties after being initialized:
+
+```javascript
+let point = new Point(1, 2);
+point.draw();
+```
+
+**access modifiers** can be applied to _fields_, _properties_, and _methods_. 
+
+three types:
+- public
+- private
+- protected

@@ -1,11 +1,15 @@
-var ColorRed = 0;
-var ColorGreen = 1;
-var ColorBlue = 2;
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 2] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
-})(Color || (Color = {}));
-;
-var backgroundColor = Color.Red;
+class Point {
+  private x: number;
+  private y: number;
+  constructor(x?: number, y?: number) {
+    this.x = x;
+    this.y = y;
+  }
+  draw() {
+    console.log('X: ' + this.x + ', Y: ' + this.y);
+  }
+}
+
+let point = new Point (1, 2);
+point.x = 3;
+point.draw();
