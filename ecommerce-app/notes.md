@@ -317,3 +317,18 @@ three types:
 
 **Access modifiers** control the accessibility of class properties.
 TypeScript has two access modifiers - _public_ and _private_.
+
+## 17
+ **properties** a variable that is attached to an object.
+ **getter** a method that gets the value of a specific property
+ **setter** a method that sets the value of a specific property
+
+ getter methods must not expect a parameter, while setter methods expect exactly one parameter (the new value to set):
+
+ ```javascript
+ var o = {
+  a: 7,
+  get b() { return this.a + 1; },
+  set c(x) { this.a = x / 2; }
+};
+ ```
