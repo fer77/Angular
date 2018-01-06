@@ -306,9 +306,14 @@ let point = new Point(1, 2);
 point.draw();
 ```
 
-**access modifiers** can be applied to _fields_, _properties_, and _methods_. 
+**access modifiers** can be applied to _fields_, _properties_, and _methods_.
 
 three types:
 - public
 - private
 - protected
+
+## 16
+
+**Access modifiers** control the accessibility of class properties.
+TypeScript has two access modifiers - _public_ and _private_.
