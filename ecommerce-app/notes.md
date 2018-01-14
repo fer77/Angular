@@ -389,3 +389,22 @@ import { CoursesComponent } from 'app/courses.component';
 ```
 
 With components we can extend HTML vocabulary.
+
+## 22
+
+Creating components manually can be a little tedious and prone to mistakes.
+
+CLI:
+
+`ng g c course`
+
+will create the following files for the application:
+
+```bash
+create src/app/course/course.component.css
+create src/app/course/course.component.html
+create src/app/course/course.component.spec.ts
+create src/app/course/course.component.ts
+update src/app/app.module.ts
+```
+
