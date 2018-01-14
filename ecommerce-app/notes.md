@@ -336,3 +336,6 @@ TypeScript has two access modifiers - _public_ and _private_.
 ## 18
 
 **module** in typescript we divide our code into files(modules) and export/import one or more types.
+
+## 19
+
