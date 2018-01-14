@@ -339,3 +339,14 @@ TypeScript has two access modifiers - _public_ and _private_.
 
 ## 19
 
+## 20
+
+**components** encampsulated the _data_, _HTML template_, and _logic_ of a view.
+
+every application has at least one _app_ or _root_ component. Apps are a tree of components starting from the _app_ or _root_ component.
+
+**module** a container for a group of related components.
+
+every application has at least one module called _appModule_. Breaks the application into managable sections.
+
+`App` => `M2` => `M3`
