@@ -1,22 +1,36 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Like = /** @class */ (function () {
-    function Like(counter, selected) {
-        this.counter = counter;
-        this.selected = selected;
+    function Like(_counter, _selected) {
+        this._counter = _counter;
+        this._selected = _selected;
     }
     Like.prototype.click = function () {
-        if (this.selected) {
-            this.counter -= 1;
+        if (this._selected) {
+            this._counter -= 1;
         }
         else {
-            this.counter += 1;
+            this._counter += 1;
         }
         // Same as:
-        // this.counter += (this.selected) ? 1 : -1;
-        // 'toggles' boolean for selected property.
-        this.selected = !this.selected;
+        // this._counter += (this._selected) ? 1 : -1;
+        // 'toggles' boolean for _selected property.
+        this._selected = !this._selected;
     };
+    Object.defineProperty(Like.prototype, "likesCount", {
+        get: function () {
+            return this._counter;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Like.prototype, "isSelected", {
+        get: function () {
+            return this._selected;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return Like;
 }());
 exports.Like = Like;
