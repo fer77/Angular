@@ -350,3 +350,42 @@ every application has at least one _app_ or _root_ component. Apps are a tree of
 every application has at least one module called _appModule_. Breaks the application into managable sections.
 
 `App` => `M2` => `M3`
+
+## 21
+
+Steps to using _components_:
+
+1. _Create_ a component
+```javascript
+// courses.components.ts
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'courses',
+    template: '<h2>Courses Component</h2>'
+})// Decorator function
+
+export class CoursesComponent {
+
+}
+```
+2. _register_ new component in a module
+```javascript
+//app.modules.ts
+//...
+import { CoursesComponent } from 'app/courses.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CoursesComponent
+  ],
+//...
+```
+3. add an element in an _HTML markup_
+```html
+// app.component.html
+<courses></courses>
+```
+
+With components we can extend HTML vocabulary.
