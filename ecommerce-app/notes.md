@@ -408,3 +408,6 @@ create src/app/course/course.component.ts
 update src/app/app.module.ts
 ```
 
+## 23
+
+`{{}}` _string interpolation_
