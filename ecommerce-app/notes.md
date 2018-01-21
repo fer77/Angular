@@ -417,3 +417,11 @@ update src/app/app.module.ts
 **directives** 
 
 add an `*` to a any directive that modifies the DOM.
+
+## 25
+
+**services** 
+
+A _component_ should not contain any logic other than the 'presentation' logic of the app. This allows to use a service in other parts of the application. And _unit test_ that _component_ with out the dependency for logic of the app (i.e. an HTTP service);
+
+There is no _decorator_ for services like there is for _components_.
