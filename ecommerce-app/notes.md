@@ -411,3 +411,9 @@ update src/app/app.module.ts
 ## 23
 
 `{{}}` _string interpolation_
+
+## 24
+
+**directives** 
+
+add an `*` to a any directive that modifies the DOM.
