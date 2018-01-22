@@ -433,3 +433,16 @@ _constructor_ is where an objec is initialized.
 **dependency injection** providing or 'injecting' the dependencies of a class into its constructor.
 
 **singleton** a single instance of an object exists in the memory.
+
+## 27 
+
+Creating a service with Angular's CLI:
+
+`ng g s email`
+
+Creates two files:
+
+- one file is the service file.
+- the other contains boilerplate for writing unit test.
+
+`@Injectable` 
