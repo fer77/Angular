@@ -445,4 +445,4 @@ Creates two files:
 - one file is the service file.
 - the other contains boilerplate for writing unit test.
 
-`@Injectable` 
+`@Injectable` (decorator) needed if the service had dependencies.
