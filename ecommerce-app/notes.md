@@ -480,3 +480,19 @@ _property binding_ works one way, from the component to the DOM.
 ```
 
 ## 29
+
+_DOM (Document Object Model)_ a model of object that represents the structure of a document, a tree of objects in memory.
+
+90% of the time HTML attributes have a one to one mapping to propeties of DOM objects.
+
+When using _property binding_ we are binding to a property of a DOM object and not an HTML attribute.
+
+if we want to bind an HTML attribute pre-fix `attr.` to the property:
+
+```html
+<table>
+    <tr>
+        <td [attr.colspan]="colSpan"></td>
+    </tr>
+</table>
+```
