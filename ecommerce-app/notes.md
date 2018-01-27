@@ -458,3 +458,25 @@ Creates two files:
 5. add a list of authors to the `authors.service.ts` file
 6. inject the service in to the cunstroctor of the `authors.component.ts`
 7. render list of authors in the template.
+
+## 28
+
+interpolation `{{}}` is syntactic sugar. When Angular compiles our code Angular performs _property binding_.
+
+**property binding** binding a property in the DOM to a field or property in the component. 
+
+_interpolation_ vs _property binding_
+
+use _interpolation_ works well for adding dynamic values between headings, paragraphs, lists...
+
+```html
+<img src="{{ imageUrl }}"/>
+```
+
+_property binding_ works one way, from the component to the DOM.
+
+```html
+<img [src]="title"/>
+```
+
+## 29
