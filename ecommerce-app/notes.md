@@ -446,3 +446,15 @@ Creates two files:
 - the other contains boilerplate for writing unit test.
 
 `@Injectable` (decorator) needed if the service had dependencies.
+
+## Assignment: display a list of authors
+
+1. register a component:
+  `ng g c authors`
+2. add the class `authors` to the author's component.
+3. create a service:
+  `ng g s authors`
+4. add the service as a provider to `app.module`
+5. add a list of authors to the `authors.service.ts` file
+6. inject the service in to the cunstroctor of the `authors.component.ts`
+7. render list of authors in the template.
