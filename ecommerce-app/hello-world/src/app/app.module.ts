@@ -7,12 +7,15 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from 'app/courses.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from 'app/courses.service';
+import { AuthorsComponent } from './authors/authors.component';
+import { AuthorsService } from 'app/authors.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    CourseComponent
+    CourseComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import { CoursesService } from 'app/courses.service';
     HttpModule
   ],
   providers: [
-    CoursesService
+    CoursesService,
+    AuthorsService
   ],
   bootstrap: [AppComponent]
 })
