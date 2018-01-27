@@ -496,3 +496,14 @@ if we want to bind an HTML attribute pre-fix `attr.` to the property:
     </tr>
 </table>
 ```
+
+## 30
+
+Install _bootstrap_
+
+1. `npm install bootstrap --save`
+2. import style sheet to `styles.css`
+```css
+/* in styles.css */
+@import"~bootstrap/dist/css/bootstrap.css"
+```
