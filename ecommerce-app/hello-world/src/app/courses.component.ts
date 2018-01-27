@@ -4,6 +4,7 @@ import { CoursesService } from 'app/courses.service';
 @Component({
     selector: 'courses',
     template: `
+        <button class="btn btn-primary"> Get started</button>
         <h2>{{ title }}</h2>
         <ul>
             <li *ngFor="let course of courses">
