@@ -10,13 +10,19 @@ import { CoursesService } from 'app/courses.service';
                 {{ course }}
             </li>
         </ul>
-        <img src="{{ imageUrl }}"/>
+        <img [src]="imageUrl"/>
+        <table>
+            <tr>
+                <td [attr.colspan]="colSpan"></td>
+            </tr>
+        </table>
         `
 })
 
 export class CoursesComponent {
     title = 'List of courses';
     imageUrl = 'http://lorempixel.com/400/200';
+    colSpan = 2;
     courses;
 
     constructor(service: CoursesService) {
