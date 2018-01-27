@@ -9,11 +9,14 @@ import { CoursesService } from 'app/courses.service';
             <li *ngFor="let course of courses">
                 {{ course }}
             </li>
-        </ul>`
+        </ul>
+        <img src="{{ imageUrl }}"/>
+        `
 })
 
 export class CoursesComponent {
     title = 'List of courses';
+    imageUrl = 'http://lorempixel.com/400/200';
     courses;
 
     constructor(service: CoursesService) {
