@@ -5,7 +5,7 @@ import { CoursesService } from 'app/courses.service';
     selector: 'courses',
     template: `
         <button class="btn btn-primary" [class.active]="isActive"> Get started</button>
-        <h2>{{ title }}</h2>
+        <h2 [style.color]="isActive ? 'blue' : 'black'">{{ title }}</h2>
         <ul>
             <li *ngFor="let course of courses">
                 {{ course }}
