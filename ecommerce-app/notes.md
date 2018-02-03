@@ -510,4 +510,6 @@ Install _bootstrap_
 
 ## 31
 
-**Class binding** `[class.active]="isActive"` added dynamically based on some condition.
+**class binding** `[class.active]="isActive"` added dynamically based on some condition.
+
+**style binding**  `[style.color]="isActive ? 'blue' : 'black'"`
