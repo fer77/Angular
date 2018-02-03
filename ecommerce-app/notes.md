@@ -517,3 +517,5 @@ Install _bootstrap_
 **event binding** events raised from the DOM. To get access to the event object, it needs to be passed as a parameter. `$event` will reperesent a DOM event.
 
 **event bubbling** when an event bubbles up the event tree. To stop an event from bubbling up: `$event.stopPropagation()`
+
+**event filtering** `(keyup.enter)="onKeyUp()"`
