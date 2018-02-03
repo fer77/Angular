@@ -519,3 +519,5 @@ Install _bootstrap_
 **event bubbling** when an event bubbles up the event tree. To stop an event from bubbling up: `$event.stopPropagation()`
 
 **event filtering** `(keyup.enter)="onKeyUp()"`
+
+**template variable** `#email` and pass `(keyup.enter)="onKeyUp(email.value)"` to the event filter and its method `onKeyUp(email){}`
