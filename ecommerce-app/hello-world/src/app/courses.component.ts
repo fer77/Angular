@@ -4,7 +4,9 @@ import { CoursesService } from 'app/courses.service';
 @Component({
     selector: 'courses',
     template: `
-        <button class="btn btn-primary" [class.active]="isActive"> Get started</button>
+        <div (click)="onDivClicked()">
+            <button (click)="welcome($event)" class="btn btn-primary" [class.active]="isActive"> Get started</button>
+        </div>
         <h2 [style.color]="isActive ? 'blue' : 'black'">{{ title }}</h2>
         <ul>
             <li *ngFor="let course of courses">
@@ -26,6 +28,16 @@ export class CoursesComponent {
     colSpan = 2;
     courses;
     isActive = true;
+
+    onDivClicked() {
+        console.log('div was clicked!');
+    }
+    welcome($event) {
+        // console.log($event);
+        $event.stopPropagation();
+        
+        console.log('button was clicked!');
+    }
 
     constructor(service: CoursesService) {
         this.courses = service.getCourses();
