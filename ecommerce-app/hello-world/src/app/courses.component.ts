@@ -4,7 +4,7 @@ import { CoursesService } from 'app/courses.service';
 @Component({
     selector: 'courses',
     template: `
-        <button class="btn btn-primary"> Get started</button>
+        <button class="btn btn-primary" [class.active]="isActive"> Get started</button>
         <h2>{{ title }}</h2>
         <ul>
             <li *ngFor="let course of courses">
@@ -25,6 +25,7 @@ export class CoursesComponent {
     imageUrl = 'http://lorempixel.com/400/200';
     colSpan = 2;
     courses;
+    isActive = true;
 
     constructor(service: CoursesService) {
         this.courses = service.getCourses();
