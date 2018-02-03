@@ -8,7 +8,7 @@ import { CoursesService } from 'app/courses.service';
             <button (click)="welcome($event)" class="btn btn-primary" [class.active]="isActive"> Get started</button>
         </div>
         <h2 [style.color]="isActive ? 'blue' : 'black'">{{ title }}</h2>
-        <input (keyup.enter)="onKeyUp()" />
+        <input #email (keyup.enter)="onKeyUp(email.value)" />
         <ul>
             <li *ngFor="let course of courses">
                 {{ course }}
@@ -30,8 +30,8 @@ export class CoursesComponent {
     courses;
     isActive = true;
 
-    onKeyUp() {
-        alert('enter was pressed');
+    onKeyUp(email) {
+        alert(email);
     }
     onDivClicked() {
         console.log('div was clicked!');
