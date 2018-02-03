@@ -8,6 +8,7 @@ import { CoursesService } from 'app/courses.service';
             <button (click)="welcome($event)" class="btn btn-primary" [class.active]="isActive"> Get started</button>
         </div>
         <h2 [style.color]="isActive ? 'blue' : 'black'">{{ title }}</h2>
+        <input (keyup.enter)="onKeyUp()" />
         <ul>
             <li *ngFor="let course of courses">
                 {{ course }}
@@ -29,13 +30,16 @@ export class CoursesComponent {
     courses;
     isActive = true;
 
+    onKeyUp() {
+        alert('enter was pressed');
+    }
     onDivClicked() {
         console.log('div was clicked!');
     }
     welcome($event) {
         // console.log($event);
         $event.stopPropagation();
-        
+
         console.log('button was clicked!');
     }
 
