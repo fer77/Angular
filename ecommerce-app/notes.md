@@ -507,3 +507,7 @@ Install _bootstrap_
 /* in styles.css */
 @import"~bootstrap/dist/css/bootstrap.css"
 ```
+
+## 31
+
+**Class binding** `[class.active]="isActive"` added dynamically based on some condition.
