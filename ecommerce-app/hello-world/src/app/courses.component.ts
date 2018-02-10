@@ -15,6 +15,7 @@ import { CoursesService } from 'app/courses.service';
             <li>{{course.rating | number:'1.2-2'}}</li>
             <li>{{course.price | currency}}</li>
             <li>{{course.releaseDate | date:'shortDate'}}</li>
+            <li>{{course.description | trunkate: 10}}</li>
         </ul>
         <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
         <ul>
@@ -38,6 +39,7 @@ export class CoursesComponent {
     courses;
     course = {
         title: "Some title",
+        description: "You know what you said about the structures becoming shackles. You were right and I can't take it, the injustice. I mean, no one ever's gonna know who saved the entire city. They scream and they cry much as you're doing now. Batman may have made the front page but Bruce Wayne got pushed to page eight. Perhaps you should read the instructions first? My anger outweights my guilt.",
         rating: 4.2356,
         students: 3059,
         price: 19,
