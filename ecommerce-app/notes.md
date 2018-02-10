@@ -586,3 +586,9 @@ interface PipeTransform {
 ```
 
 3. register component in `app.module`
+
+```javascritp
+// app.module.ts
+import { TrunkatePipe } from './trunkate.pipe';
+//...
+```
