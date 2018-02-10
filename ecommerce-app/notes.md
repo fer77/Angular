@@ -521,3 +521,29 @@ Install _bootstrap_
 **event filtering** `(keyup.enter)="onKeyUp()"`
 
 **template variable** `#email` and pass `(keyup.enter)="onKeyUp(email.value)"` to the event filter and its method `onKeyUp(email){}`
+
+## 32
+
+In OOP parameters shouldn't be passed around. An obj. should have all the data it needs.
+
+```javascript
+// bad
+//...
+onKeyUp(email) {
+    alert(email);
+}
+//...
+
+// good
+//...
+email;
+onKeyUp() {
+    alert(this.email);
+}
+//...
+```
+
+**property binding** binding is from the component -> to the view (one way).
+
+**[(ngModel)]** two way binding syntax.
+
