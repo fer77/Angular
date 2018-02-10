@@ -8,6 +8,14 @@ import { CoursesService } from 'app/courses.service';
             <button (click)="welcome($event)" class="btn btn-primary" [class.active]="isActive"> Get started</button>
         </div>
         <h2 [style.color]="isActive ? 'blue' : 'black'">{{ title }}</h2>
+        <h2>Featured Course</h2>
+        <ul>
+            <li>{{course.title | uppercase | lowercase}}</li>
+            <li>{{course.students | number}}</li>
+            <li>{{course.rating | number:'1.2-2'}}</li>
+            <li>{{course.price | currency}}</li>
+            <li>{{course.releaseDate | date:'shortDate'}}</li>
+        </ul>
         <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
         <ul>
             <li *ngFor="let course of courses">
@@ -24,10 +32,17 @@ import { CoursesService } from 'app/courses.service';
 })
 
 export class CoursesComponent {
-    title = 'List of courses';
-    imageUrl = 'http://lorempixel.com/400/200';
+    title = "List of courses";
+    imageUrl = "http://lorempixel.com/400/200";
     colSpan = 2;
     courses;
+    course = {
+        title: "Some title",
+        rating: 4.2356,
+        students: 3059,
+        price: 19,
+        releaseDate: new Date(2018, 3, 1)
+    };
     isActive = true;
     email = "fernando@email.com";
 

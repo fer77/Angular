@@ -547,3 +547,13 @@ onKeyUp() {
 
 **[(ngModel)]** two way binding syntax.
 
+## 33
+
+**pipes**
+
+Built-in [Pipes](https://alligator.io/angular/built-in-pipes-angular/):
+- Uppercase
+- Lowercase
+- Decimial
+- Currency
+- Percent
