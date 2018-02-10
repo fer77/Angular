@@ -557,3 +557,32 @@ Built-in [Pipes](https://alligator.io/angular/built-in-pipes-angular/):
 - Decimial
 - Currency
 - Percent
+
+## 34
+
+creating a custom pipe:
+
+1. 
+```javascript
+import {Pipe, PipeTransform}
+```
+
+**Pipe** decorator function
+
+**PipeTransform** _interface_ that defines the shape of all pipes in angular.
+
+2. 
+```javascript
+export class TrunkatePipe implements PipeTransform {}
+```
+_"implements"_ tells the TS compiler that this class should have the same shape as the _PipeTransform_ interface.
+
+```javascript
+// PipeTransform interface implementation.
+interface PipeTransform { 
+  transform(value: any, ...args: any[]): any
+}
+// Our class should have this same "signature"
+```
+
+3. register component in `app.module`
