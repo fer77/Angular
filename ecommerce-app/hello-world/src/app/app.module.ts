@@ -1,3 +1,4 @@
+import { TrunkatePipe } from './trunkate.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,7 +16,8 @@ import { AuthorsService } from 'app/authors.service';
     AppComponent,
     CoursesComponent,
     CourseComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    TrunkatePipe
   ],
   imports: [
     BrowserModule,
