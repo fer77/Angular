@@ -5,7 +5,13 @@ import { CoursesService } from 'app/courses.service';
     selector: 'courses',
     template: `
         <div (click)="onDivClicked()">
-            <button (click)="welcome($event)" class="btn btn-primary" [class.active]="isActive"> Get started</button>
+            <button (click)="welcome($event)" class="btn btn-primary" [class.active]="isActive">Get started</button>
+        </div>
+        <div>
+            <button (click)="favorite()" type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-star" *ngIf="isFavorite" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star-empty" *ngIf="!isFavorite" aria-hidden="true"></span>
+            </button>
         </div>
         <h2 [style.color]="isActive ? 'blue' : 'black'">{{ title }}</h2>
         <h2>Featured Course</h2>
@@ -46,6 +52,7 @@ export class CoursesComponent {
         releaseDate: new Date(2018, 3, 1)
     };
     isActive = true;
+    isFavorite = true;
     email = "fernando@email.com";
 
     onKeyUp() {
@@ -59,6 +66,10 @@ export class CoursesComponent {
         $event.stopPropagation();
 
         console.log('button was clicked!');
+    }
+    favorite() {
+        this.isFavorite === true ? this.isFavorite = false : this.isFavorite = true;
+        // console.log('clicked');
     }
 
     constructor(service: CoursesService) {
