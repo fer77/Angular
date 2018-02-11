@@ -1,6 +1,11 @@
+<input type="text" [(ngModel)]="title" >
+
+<br>
+
 <h1>
-  {{title}}
+  {{ title | titleCase }}
 </h1>
+
 <courses></courses>
 
 <authors></authors>

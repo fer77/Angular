@@ -11,6 +11,7 @@ import { CoursesService } from 'app/courses.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorsService } from 'app/authors.service';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { TitleCasePipe } from './title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     CourseComponent,
     AuthorsComponent,
     TrunkatePipe,
-    FavoriteComponent
+    FavoriteComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
