@@ -610,3 +610,14 @@ export class FavoriteComponent implements OnInit {
   @Input() isFavorite: boolean;
   //...
 ```
+
+## 37
+
+**Alias** keeps the "contract" of a component intact. Minimizes impact of changes to app components.
+
+```javascript
+// favorite.component.ts
+//...
+  @Input('is-favorite') isFavorite: boolean;
+//...
+```
