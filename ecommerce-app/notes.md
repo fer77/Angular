@@ -621,3 +621,24 @@ export class FavoriteComponent implements OnInit {
   @Input('is-favorite') isFavorite: boolean;
 //...
 ```
+
+## 38
+
+**Output**
+
+```javascript
+// favorite.component.ts
+import { Input, EventEmitter } from '@angular/core';
+//...
+export class FavoriteComponent implements OnInit {
+
+  @Input() isFavorite: boolean;
+  @Output() change = new EventEmitter(); // declares change as our EventEmitter
+
+  //...
+  onClick() {
+    //...
+
+    this.change.emit(); // will emmit an event.
+  }
+```
