@@ -642,3 +642,35 @@ export class FavoriteComponent implements OnInit {
     this.change.emit(); // will emmit an event.
   }
 ```
+
+## 39
+
+1. 
+```javascript
+// favorite.component.ts
+  //...
+  onClick() {
+    //...
+
+    this.change.emit(this.isSelected); // can pass data through here.
+  }
+```
+
+2. subscriber of cnages to the `favorite.component`
+```javascritp
+// app.component.ts
+//...
+
+  onFavoriteChanged(isFavorite) {
+    console.log("Favorite changed:", isFavorite);
+  }
+//...
+```
+
+3. 
+```html
+// app.component.html
+<favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
+```
+`$event` anything that is passed when raising an event.
+
