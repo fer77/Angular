@@ -596,3 +596,17 @@ import { TrunkatePipe } from './trunkate.pipe';
 ## 35
 
 To make a _component_ more re-usable add _input_ and _output_ properties.  **Input** properties are used to pass _state_ to a component. **Output** properties are used to raise _events_ from the component. Togther they make the **component API**
+
+## 36
+
+`@input()` a decorator for marking fields and properties as input properties.
+
+```javascript
+// favorite.component.ts
+import { Input } from '@angular/core';
+//...
+export class FavoriteComponent implements OnInit {
+
+  @Input() isFavorite: boolean;
+  //...
+```
