@@ -677,3 +677,13 @@ export class FavoriteComponent implements OnInit {
 ## 40
 
 Aliasing output properties assures that in the future when an event is renamed nothing that depends on that component will be afflected.
+
+## 41
+
+Templates
+
+`templateUrl: //...` better for larger components.
+or
+`tempalete: //...` useful when building a small component.
+
+templates are bundled with the rest of the app code.
