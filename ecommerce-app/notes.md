@@ -674,3 +674,6 @@ export class FavoriteComponent implements OnInit {
 ```
 `$event` anything that is passed when raising an event.
 
+## 40
+
+Aliasing output properties assures that in the future when an event is renamed nothing that depends on that component will be afflected.
