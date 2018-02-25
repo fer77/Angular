@@ -708,3 +708,50 @@ and write styles here, similar to the `<style>` tag.
 hierarchy is whichever style is applied last in the component method data.
 
 styles will not affected to other glyphicons on the page.
+
+## 43
+
+**shadow DOM** specification that enables DOM tree and style encapsulation.  It allows for _scoped styles_ to elements.
+
+```javascript
+var el = document.querySelector('favorite');
+var root = el.createShadowRoot(); // gives access to the shadow root for the element. Without it this style would affect other h1 elements on the page.
+
+// this element is now scoped.
+root.el.innerHTML = `
+  <style>h1 { color: red }</style>
+  <h1>Hello</h1>
+`;
+```
+
+**view encapsulation** _enum_ member defined in angular core.
+```javascript
+@Component({
+  //...
+  encapsulation: ViewEncapsulation
+})
+```
+has three members:
+1. Emulated (default): angular will emulate the concept of shadow DOM. Friendly to browsers that do not support shadow DOM.
+2. Native: uses the provided shadow DOM
+3. None
+
+```html
+<!-- angular attaches an attribute to elements like this: -->
+<style>
+  .glyphicon[_ngcontent-c1] {
+    color: red;
+  }
+</style>
+```
+
+## 44
+
+ngContent
+
+anything placed here will replace `ng-content`:
+(note there is no need for a selector if there's only one `ng-content` tag)
+
+```html
+<ng-content select=".heading"></ng-content>
+```
