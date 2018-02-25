@@ -680,10 +680,31 @@ Aliasing output properties assures that in the future when an event is renamed n
 
 ## 41
 
-Templates
+Two ways for using templates:
 
 `templateUrl: //...` better for larger components.
 or
 `tempalete: //...` useful when building a small component.
 
 templates are bundled with the rest of the app code.
+
+## 42
+
+Three ways for applying styles to components:
+
+1. using `styleUrls: ['./favorite.component.css']` in the component method data.
+
+2. 
+```html
+  styles: [
+    .container {
+      color: green;
+    }]
+``` 
+and write styles here, similar to the `<style>` tag.
+
+3. or inline int the compnent html template with `<style>` tag.
+
+hierarchy is whichever style is applied last in the component method data.
+
+styles will not affected to other glyphicons on the page.
