@@ -755,3 +755,11 @@ anything placed here will replace `ng-content`:
 ```html
 <ng-content select=".heading"></ng-content>
 ```
+
+## 45
+
+**ng-container** when you need content needs to be rendered on a page without putting it on an html element.
+
+## Assignment
+
+`ng g c like`
