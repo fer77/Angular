@@ -763,3 +763,9 @@ anything placed here will replace `ng-content`:
 ## Assignment
 
 `ng g c like`
+
+## 46
+ **directives** are used to modify the DOM. There are two types of _directives_:
+
+ 1. structural
+ 2. attribute
