@@ -769,3 +769,9 @@ anything placed here will replace `ng-content`:
 
  1. structural
  2. attribute
+
+ ## 47
+
+ **ng-if vs hidden** _ng-if_ removes elements. _hidden_ just hides the element (display:none/block).
+
+ if the element tree is small and not costly to build, it really doesn't matter which is used. however, if the element tree is large and costly to build then _hidden_ may be the better option.
