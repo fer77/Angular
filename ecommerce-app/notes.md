@@ -775,3 +775,7 @@ anything placed here will replace `ng-content`:
  **ng-if vs hidden** _ng-if_ removes elements. _hidden_ just hides the element (display:none/block).
 
  if the element tree is small and not costly to build, it really doesn't matter which is used. however, if the element tree is large and costly to build then _hidden_ may be the better option.
+
+ ## 48
+
+ **ngSwitch** to compare the value of a field or property against multiple values.
