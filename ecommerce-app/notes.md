@@ -779,3 +779,7 @@ anything placed here will replace `ng-content`:
  ## 48
 
  **ngSwitch** to compare the value of a field or property against multiple values.
+
+ ## 49
+
+ **ngFor** 
