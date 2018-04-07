@@ -786,4 +786,11 @@ anything placed here will replace `ng-content`:
 
  ## 50
 
- 
+ **ngFor** and _change events_
+
+ ## 51
+
+ **ngFor** and _trackby_
+
+ Angular by default tracks objects by their identity.
+ _trackby_ tells angular how to track objects (by their id).
