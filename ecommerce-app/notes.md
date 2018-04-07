@@ -833,3 +833,7 @@ anything placed here will replace `ng-content`:
       }"
 <!-- ... -->
  ```
+
+ ## 54
+
+ **ngStyle** cleans up code when dealing with multiple style directives.

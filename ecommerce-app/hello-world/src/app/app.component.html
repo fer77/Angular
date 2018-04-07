@@ -31,11 +31,18 @@
 </div> -->
 
 <!-- <button (click)="onAdd()">Add</button> -->
-<button (click)="loadCourses()">Load Courses</button>
+<!-- <button (click)="loadCourses()">Load Courses</button>
 
 <ul>
     <li *ngFor="let course of courses; trackBy: trackCourse">
         {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
         <button (click)="onChange(course)">Remove</button>
     </li>
-</ul>
+</ul> -->
+
+<button
+    [ngStyle]="{
+        'backgroundColor': canSave ? 'blue': 'gray',
+        'color': canSave ? 'white': 'black',
+        'fontWeight': canSave ? 'bold': 'normal'
+    }">save</button>
