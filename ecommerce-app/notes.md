@@ -794,3 +794,27 @@ anything placed here will replace `ng-content`:
 
  Angular by default tracks objects by their identity.
  _trackby_ tells angular how to track objects (by their id).
+
+ ## 52
+
+ The leading asterisk.
+ ---
+
+ *ngIf the leading asterisk tells angular to render a block using and ng template element:
+
+ ```html
+ <div *ngIf="...">Some content</div>
+
+ <!-- angular will rewrite this block and bind ngIf and create an else block for the template -->
+
+<ng-template [ngIf]="...">
+  <div>
+    Some content
+  </div>
+</ng-template>
+<ng-template [ngIf]="!(...)">
+  <div>
+    Some content
+  </div>
+</ng-template>
+ ```
