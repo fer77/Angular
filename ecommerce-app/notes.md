@@ -841,3 +841,9 @@ anything placed here will replace `ng-content`:
  ## 55
 
  **traversal operator** (_?_) if an assignment is _null_ or _undefined_ angular ignores the property, otherwise angular will render
+
+ ## 56
+
+ **Custom Directives** 
+ 
+ `ng g d input-format` modifies app.module and creates two files, a unit test file and the actual directive.
