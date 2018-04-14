@@ -847,3 +847,9 @@ anything placed here will replace `ng-content`:
  **Custom Directives** 
  
  `ng g d input-format` modifies app.module and creates two files, a unit test file and the actual directive.
+
+ ## 57
+
+ `ng g c zippy` create a new component then take it one step at the time:
+
+ 1. Define a component's API (app.component.html)...
