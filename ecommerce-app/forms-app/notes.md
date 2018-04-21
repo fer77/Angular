@@ -30,3 +30,17 @@ or
 - more control over validation logic
 - good for complex forms
 - unit etable
+
+## 2
+
+**ngModel** can be used like this
+```javascript
+// By binding the ngModel.
+//..[(ngModel)]="firstName...
+// or
+//...by itself ngModel and assingning an attribute name to the element being used.
+```
+
+_form control class_ tracks state changes and the validity of input fields.
+
+## 3
