@@ -46,3 +46,14 @@ _form control class_ tracks state changes and the validity of input fields.
 ## 3
 
 **output** properties are used to raise custom events.
+
+## 4
+
+To check if an etire group is valid or not:
+
+```html
+<!-- ... -->
+<div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="!contact.valid">...</div>
+</div>
+```
