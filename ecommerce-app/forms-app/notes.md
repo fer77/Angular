@@ -57,3 +57,11 @@ To check if an etire group is valid or not:
     <div *ngIf="!contact.valid">...</div>
 </div>
 ```
+
+## 5
+
+**FormControl** represents one input field.
+    _ngModel_ when applied to an input field Angular creates a _FormControl_ object and associates that to that input field.
+**FormGroup** represents a group of input fields.
+    _ngForm_ automatically applied to all form elements. Tracks form changes and validity. Exposes an output property **ngSubmit**
+    _ngModelGroup_ will cteate a _FormGroup_ object for a group. Does not expose an output property.
