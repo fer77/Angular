@@ -65,3 +65,7 @@ To check if an etire group is valid or not:
 **FormGroup** represents a group of input fields.
     _ngForm_ automatically applied to all form elements. Tracks form changes and validity. Exposes an output property **ngSubmit**
     _ngModelGroup_ will cteate a _FormGroup_ object for a group. Does not expose an output property.
+
+    ## 6
+
+**ngValue** to set the value of a property to a complex object.
