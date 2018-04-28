@@ -45,3 +45,4 @@ _form control class_ tracks state changes and the validity of input fields.
 
 ## 3
 
+**output** properties are used to raise custom events.
