@@ -824,7 +824,7 @@ anything placed here will replace `ng-content`:
  **ngClass**
  1. bind it to an expression
  2. add as many vlaue pairs as needed for the element
- 3. each key will represent a css class and the value will determine    which class to apply to the element.
+ 3. each key will represent a css class and the value will determine which class to apply to the element.
 
  ```html
  <!-- ... -->
