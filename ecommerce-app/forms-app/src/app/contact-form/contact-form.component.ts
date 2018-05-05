@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactFormComponent {
   contactMethods = [
-    { id: 1, name: 'Email' },
-    { id: 2, name: 'Phone' }
+    { id: 1, name: 'Development' },
+    { id: 2, name: 'Art' },
+    { id: 3, name: 'Languages' }
   ]
   log(x) { console.log(x); }
 
