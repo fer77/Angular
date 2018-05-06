@@ -765,95 +765,101 @@ anything placed here will replace `ng-content`:
 `ng g c like`
 
 ## 46
- **directives** are used to modify the DOM. There are two types of _directives_:
+**directives** are used to modify the DOM. There are two types of _directives_:
 
- 1. structural
- 2. attribute
+1. structural
+2. attribute
 
- ## 47
+## 47
 
- **ng-if vs hidden** _ng-if_ removes elements. _hidden_ just hides the element (display:none/block).
+**ng-if vs hidden** _ng-if_ removes elements. _hidden_ just hides the element (display:none/block).
 
- if the element tree is small and not costly to build, it really doesn't matter which is used. however, if the element tree is large and costly to build then _hidden_ may be the better option.
+if the element tree is small and not costly to build, it really doesn't matter which is used. however, if the element tree is large and costly to build then _hidden_ may be the better option.
 
- ## 48
+## 48
 
- **ngSwitch** to compare the value of a field or property against multiple values.
+**ngSwitch** to compare the value of a field or property against multiple values.
 
- ## 49
+## 49
 
- **ngFor** 
+**ngFor** 
 
- ## 50
+## 50
 
- **ngFor** and _change events_
+**ngFor** and _change events_
 
- ## 51
+## 51
 
- **ngFor** and _trackby_
+**ngFor** and _trackby_
 
- Angular by default tracks objects by their identity.
- _trackby_ tells angular how to track objects (by their id).
+Angular by default tracks objects by their identity.
+_trackby_ tells angular how to track objects (by their id).
 
- ## 52
+## 52
 
- The leading asterisk.
- ---
+The leading asterisk.
+---
 
- *ngIf the leading asterisk tells angular to render a block using and ng template element:
+*ngIf the leading asterisk tells angular to render a block using and ng template element:
 
- ```html
- <div *ngIf="...">Some content</div>
+```html
+<div *ngIf="...">Some content</div>
 
- <!-- angular will rewrite this block and bind ngIf and create an else block for the template -->
+<!-- angular will rewrite this block and bind ngIf and create an else block for the template -->
 
 <ng-template [ngIf]="...">
-  <div>
-    Some content
-  </div>
+<div>
+  Some content
+</div>
 </ng-template>
 <ng-template [ngIf]="!(...)">
-  <div>
-    Some content
-  </div>
+<div>
+  Some content
+</div>
 </ng-template>
- ```
+```
 
- ## 53
+## 53
 
- **ngClass**
- 1. bind it to an expression
- 2. add as many vlaue pairs as needed for the element
- 3. each key will represent a css class and the value will determine which class to apply to the element.
+**ngClass**
+1. bind it to an expression
+2. add as many vlaue pairs as needed for the element
+3. each key will represent a css class and the value will determine which class to apply to the element.
 
- ```html
- <!-- ... -->
- [ngClass]="{
-            
-      }"
+```html
 <!-- ... -->
- ```
+[ngClass]="{
+          
+    }"
+<!-- ... -->
+```
 
- ## 54
+## 54
 
- **ngStyle** cleans up code when dealing with multiple style directives.
+**ngStyle** cleans up code when dealing with multiple style directives.
 
- ## 55
+## 55
 
- **traversal operator** (_?_) if an assignment is _null_ or _undefined_ angular ignores the property, otherwise angular will render
+**traversal operator** (_?_) if an assignment is _null_ or _undefined_ angular ignores the property, otherwise angular will render
 
- ## 56
+## 56
 
- **Custom Directives** 
- 
- `ng g d input-format` modifies app.module and creates two files, a unit test file and the actual directive.
+**Custom Directives** 
 
- ## 57
+`ng g d input-format` modifies app.module and creates two files, a unit test file and the actual directive.
 
- `ng g c zippy` create a new component then take it one step at the time:
+## 57
 
- 1. Define a component's API (app.component.html)...
+`ng g c zippy` create a new component then take it one step at the time:
 
- ## 58
+1. Define a component's API (app.component.html)...
 
- 
+## 58
+
+_Reactive forms_
+
+- Benefits:
+1. Control over form structure
+2. Control over form behavior
+3. Easy to unit test
+
