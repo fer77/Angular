@@ -863,3 +863,8 @@ _Reactive forms_
 2. Control over form behavior
 3. Easy to unit test
 
+## 59
+
+the _ngModel_ directive creates an internal instance of the form control class and assiciate it with the input field.
+
+_AbstractControl_ is the parent class of _FormControl_ and _FormGroup_
