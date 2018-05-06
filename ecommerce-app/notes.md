@@ -868,3 +868,15 @@ _Reactive forms_
 the _ngModel_ directive creates an internal instance of the form control class and assiciate it with the input field.
 
 _AbstractControl_ is the parent class of _FormControl_ and _FormGroup_
+
+## 60 
+
+Reactive forms use HTML5 validatros:
+`required`
+`minlength`
+`maxlength`
+`pattern`
+
+In angular they are created in a _FormControl_ object.
+
+**static** accessed directly using the class name without having to create an instance of a class.
