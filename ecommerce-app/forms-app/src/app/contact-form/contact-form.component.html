@@ -19,7 +19,7 @@
             Course Name is required.
           </div>
           <div *ngIf="courseName.errors.minlength">
-            Course Name minlength {{ courseName.errors.minlength.requiredLength }}.
+            Course name can't be less than {{ courseName.errors.minlength.requiredLength }}.
           </div>
         </div>
       </div>
