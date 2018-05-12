@@ -880,3 +880,11 @@ Reactive forms use HTML5 validatros:
 In angular they are created in a _FormControl_ object.
 
 **static** accessed directly using the class name without having to create an instance of a class.
+
+## 61
+
+_interfaces_ 
+
+## 62
+
+**Asynchronous Operation** non blocking. The process that executes the code doesn't block while waiting.
