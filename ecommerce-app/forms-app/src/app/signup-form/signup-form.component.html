@@ -1,7 +1,10 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit="login()">
+    <div *ngIf="form.error" class"alert alertdanger">
+
+    </div>
     <div class="form-group">
         <label for="username">Username</label>
-        <input
+        <input class="Username is required. "
             formControlName="username" 
             id="username" 
             type="text" 
