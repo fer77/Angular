@@ -891,3 +891,4 @@ _interfaces_
 
 ## 63
 
+elements with an asynch operation have a property called `pending` that returns true.
