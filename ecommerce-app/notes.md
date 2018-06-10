@@ -899,3 +899,29 @@ elements with an asynch operation have a property called `pending` that returns 
 _abstract controlsa_ do not have a push method.
 
 **AbstractControl** is the parent class of **FormControl**, **FormGroup**, **FormArray**.
+
+## 65 
+
+**FormBuilder** 
+```javascript
+// ...
+form = new FormGroup({
+    account: new FormGroup({
+      username: new FormControl(''),
+      password: new FormControl('')
+    })
+  });
+//Can also be written
+//...
+form;
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      name: ['', Validators.required],
+      contact: fb.group({
+        email: [],
+        phone: []
+      }),
+      topics: fb.array([])
+    })
+// Slightly cleaner approach, but not necessarily shorter.
+```
