@@ -892,3 +892,10 @@ _interfaces_
 ## 63
 
 elements with an asynch operation have a property called `pending` that returns true.
+
+## 64
+
+**FormArray()** when working with arrays in a class.
+_abstract controlsa_ do not have a push method.
+
+**AbstractControl** is the parent class of **FormControl**, **FormGroup**, **FormArray**.
