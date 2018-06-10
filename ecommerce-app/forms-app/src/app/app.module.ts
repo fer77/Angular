@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { NewFormCourseComponent } from './new-form-course/new-form-course.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupFormComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    NewFormCourseComponent
   ],
   imports: [
     BrowserModule,
