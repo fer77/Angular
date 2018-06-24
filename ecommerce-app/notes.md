@@ -929,3 +929,17 @@ form;
 ## 67
 
 `Observable<Response>` and `Promises` Performe requests with `get` http method.
+
+## 68
+
+**Lifecycle Hooks** methods that are available at certain lifecycle events:
+- creates a component
+- renders it
+- creates and renders its childtren
+- destroys a conponent
+
+**Lifecycle Hooks**:
+- OnInit
+- OnChanges
+- DoCheck
+-...
