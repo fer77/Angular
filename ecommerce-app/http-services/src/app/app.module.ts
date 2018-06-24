@@ -14,7 +14,7 @@ import { PostsComponent } from './posts/posts.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule // Sets up all dependencies properly. Choose importing here over providers, if  wanting make full use of everything offered by a module.
   ],
   providers: [],
   bootstrap: [AppComponent]

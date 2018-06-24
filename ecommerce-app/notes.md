@@ -925,3 +925,7 @@ form;
     })
 // Slightly cleaner approach, but not necessarily shorter.
 ```
+
+## 67
+
+`Observable<Response>` and `Promises` Performe requests with `get` http method.
