@@ -27,4 +27,10 @@ export class PostsComponent {
                console.log(response.json());
              })
   }
+  updatePost(post) {
+    this.http.patch(this.url + '/' + post.id, JSON.stringify({isReady: true}))
+             .subscribe(response => {
+               console.log(response.json());
+             });
+  }
 }
