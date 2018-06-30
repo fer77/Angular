@@ -963,3 +963,16 @@ _services_ can be used in multiple places.
 - `ng g s post`
 > WARNING Service is generated but not provided, it must be provided to be used
 - add `PostService` in the providers array in `app.module`
+
+## 69
+
+**handling errors**
+
+_Unexpected_
+- Server is offline
+- Network is down
+- Unhandled execptions
+
+_Expected_
+- "Not Found" errors (404)
+- "Bad request" errors (400)
