@@ -943,3 +943,15 @@ form;
 - OnChanges
 - DoCheck
 -...
+
+## 67
+
+**Separation of concerns**
+
+- classes should have a __single responsability__
+
+One solution is to create another class or a _service_ to work with the app's backend.
+
+> component->service->backend
+
+_services_ can be used in multiple places.
