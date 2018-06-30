@@ -955,3 +955,11 @@ One solution is to create another class or a _service_ to work with the app's ba
 > component->service->backend
 
 _services_ can be used in multiple places.
+
+## 68
+
+**Extracting a Service**
+
+- `ng g s post`
+> WARNING Service is generated but not provided, it must be provided to be used
+- add `PostService` in the providers array in `app.module`
