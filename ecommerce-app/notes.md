@@ -988,3 +988,6 @@ import 'rxjs/add/observable/throw';
 ```
 
 **Factory methods** static methods accessed by a class like an _Observable_ class. These methods create objects.
+
+## 71
+
