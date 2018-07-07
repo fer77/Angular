@@ -978,4 +978,13 @@ _Expected_
 - "Bad request" errors (400)
 
 ## 70
-**operator**
+**operator** methods contained within _Observables_. These operators need to be _imported_ where needed.
+
+```javascript
+//...
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
+//...
+```
+
+**Factory methods** static methods accessed by a class like an _Observable_ class. These methods create objects.
