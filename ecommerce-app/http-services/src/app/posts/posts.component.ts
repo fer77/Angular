@@ -18,8 +18,6 @@ export class PostsComponent implements OnInit {
     this.service.getPosts()
           .subscribe(response => {
             this.posts = response.json();
-          }, error => {
-            alert('An unexpected error: ' + error);
           });
   }
   createPost(input: HTMLInputElement) {
@@ -35,17 +33,15 @@ export class PostsComponent implements OnInit {
                if (error instanceof BadInput) {
                 //  this.form.setErrors(error.originalError);
                } else {
-                 alert('An unexpected error: ' + error);
-               }
+                 throw error;
+              }
             });
   }
   updatePost(post) {
     this.service.updatePost(post)
              .subscribe(response => {
                console.log(response.json());
-             }, error => {
-              alert('An unexpected error: ' + error);
-            });
+             });
   }
   deletePost(post) {
     this.service.deletePost(345) // 345
@@ -56,7 +52,7 @@ export class PostsComponent implements OnInit {
                if (error instanceof NotFoundError) {
                  alert('Post has been deleted.');
                } else {
-                 alert('An unexpected error: ' + error);
+                 throw error;
                }
             });
   }
