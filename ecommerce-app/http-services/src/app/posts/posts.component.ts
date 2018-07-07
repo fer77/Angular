@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
+import { AppError } from '../common/validators/app-error';
+import { NotFoundError } from '../common/validators/not-found-error';
 
 @Component({
   selector: 'posts',
@@ -49,8 +51,8 @@ export class PostsComponent implements OnInit {
              .subscribe(response => {
                let index = this.posts.indexOf(post);
                this.posts.splice(index, 1);
-             }, (error: Response) => {
-               if (error.status === 404) {
+             }, (error: AppError) => {
+               if (error instanceof NotFoundError) {
                  alert('Post has been deleted.');
                } else {
                  alert('An unexpected error: ' + error);
