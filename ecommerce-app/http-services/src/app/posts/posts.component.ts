@@ -20,20 +20,23 @@ export class PostsComponent implements OnInit {
   }
   createPost(input: HTMLInputElement) {
     let post: any = { title: input.value };
+    this.posts.splice(0, 0, post);
+
     input.value = '';
 
     this.service.create(post)
-             .subscribe(newPost => {
-               post.id = newPost.id;
-               this.posts.splice(0, 0, post);
-               console.log(newPost);
-             }, (error: Response) => {
-               if (error instanceof BadInput) {
-                //  this.form.setErrors(error.originalError);
-               } else {
-                 throw error;
-              }
-            });
+      .subscribe(newPost => {
+        post.id = newPost.id;
+        console.log(newPost);
+      }, (error: Response) => {
+        this.posts.splice(0, 1);
+
+        if (error instanceof BadInput) {
+          // this.form.setErrors(error.originalError);
+        } else {
+          throw error;
+        }
+      });
   }
   updatePost(post) {
     this.service.update(post)
@@ -42,16 +45,17 @@ export class PostsComponent implements OnInit {
              });
   }
   deletePost(post) {
-    this.service.delete(345) // 345
-             .subscribe(() => {
-               let index = this.posts.indexOf(post);
-               this.posts.splice(index, 1);
-             }, (error: AppError) => {
-               if (error instanceof NotFoundError) {
-                 alert('Post has been deleted.');
-               } else {
-                 throw error;
-               }
-            });
+    let index = this.posts.indexOf(post);
+    this.posts.splice(index, 1);
+    this.service.delete(post.id) // 345
+             .subscribe(
+               null, (error: AppError) => {
+                 this.posts.splice(index, 0, post);
+                 if (error instanceof NotFoundError) {
+                   alert('Post has been deleted.');
+                  } else {
+                    throw error;
+                  }
+              });
   }
 }
