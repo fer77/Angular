@@ -992,3 +992,7 @@ import 'rxjs/add/observable/throw';
 ## 71
 
 _constructors_ for derived classes must contain a direct call or super call.
+
+## 72
+
+**map** operator can transform the items in an observable.
