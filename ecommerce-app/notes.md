@@ -1000,3 +1000,20 @@ _constructors_ for derived classes must contain a direct call or super call.
 ## 73
 
 **optimistic** updates assumes call to server will be successful.
+
+## 74
+
+With _promises_ happen as soon as the code is executed.
+With _observables_ nothing happens until subscribed to them.
+
+**observables** are lazy, **promises** are eager.
+
+_observables_ provide _operators_
+
+_operators_ are powerful when it comes to implementing certain features with only a line of code (reactive programming).
+
+- observables can be converted in to promises at anytime.
+- prefer observables
+- observables allow reactive programming
+- provide a bunch of useful operators.
+-observables are lazy.
