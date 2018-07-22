@@ -996,3 +996,7 @@ _constructors_ for derived classes must contain a direct call or super call.
 ## 72
 
 **map** operator can transform the items in an observable.
+
+## 73
+
+**optimistic** updates assumes call to server will be successful.
