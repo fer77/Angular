@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 import { AppError } from '../common/validators/app-error';
 import { NotFoundError } from '../common/validators/not-found-error';
 import { BadInput } from '../common/validators/bad-input';
@@ -34,6 +35,8 @@ export class DataService {
   delete(id) {
     return this.http.delete(this.url + '/' + id)
     .map(response => response.json())
+    // .toPromise()
+    .retry(3)
     .catch(this.handleError);
   }
 
