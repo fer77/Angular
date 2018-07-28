@@ -1017,3 +1017,7 @@ _operators_ are powerful when it comes to implementing certain features with onl
 - observables allow reactive programming
 - provide a bunch of useful operators.
 -observables are lazy.
+
+## 75
+
+`RouterModule.forRoot()` defines the root rout for the aplication.
