@@ -1021,3 +1021,13 @@ _operators_ are powerful when it comes to implementing certain features with onl
 ## 75
 
 `RouterModule.forRoot()` defines the root rout for the aplication.
+
+## 76
+
+### RouterLink
+
+for simple routes use the router link directive as an attribute:
+`<a routerLink="/followers">Followers</a>` 
+
+if dealing with route parameters use the property binding syntax and set the value in an array, where the first element in the array is the path and subsequent elements are route arguments:
+`<a [routerLink]="['/followers', follower.id]">{{ follower.login }}</a>`
