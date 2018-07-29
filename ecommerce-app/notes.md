@@ -1031,3 +1031,8 @@ for simple routes use the router link directive as an attribute:
 
 if dealing with route parameters use the property binding syntax and set the value in an array, where the first element in the array is the path and subsequent elements are route arguments:
 `<a [routerLink]="['/followers', follower.id]">{{ follower.login }}</a>`
+
+## 77
+
+**Observables** is a collection of asynchronous data that arravies over time.
+
