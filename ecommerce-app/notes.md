@@ -1036,3 +1036,20 @@ if dealing with route parameters use the property binding syntax and set the val
 
 **Observables** is a collection of asynchronous data that arravies over time.
 
+## 78
+
+**Observables** a stream of asynchronous data that arrives over time.
+
+## 79
+
+An app can subscribe to multiple _observables _by combining them together:
+
+```javascript
+//...
+Observable.combineLatest([
+  this.route.paramMap,
+  this.route.queryParamMap
+]);
+//...
+```
+
