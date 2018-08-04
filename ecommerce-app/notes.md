@@ -1053,3 +1053,7 @@ Observable.combineLatest([
 //...
 ```
 
+## 80
+
+Use the **map** operator to transform the objects in our observables.
+
